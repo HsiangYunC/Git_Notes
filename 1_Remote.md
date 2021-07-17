@@ -1,5 +1,6 @@
 
 ## Remote
+### 1. Remote
 - get
 ```sh
 $ git remote
@@ -19,14 +20,14 @@ $ git remote rename <name> <new_name>
 ```
 <br>
 
-## Clone
+### 2. Clone
 Download all the contents in the remote.
 ```sh
 $ git clone <repository> <directory>
 ```
 <br>
 
-## Push
+### 3. Push
 Share the modification history from local to remote repository.
 ```sh
 $ git push <repository> <branch>
@@ -36,7 +37,7 @@ $ git push -u origin master
 ```
 <br>
 
-## Pull
+### 4. Pull
 Download the modification history from the remote repository and synchronize it to local repository.  
 ```sh
 $ git pull <repository> <branch>
