@@ -1,6 +1,8 @@
 
 ## Remote
 ### 1. Remote
+A place to record the status of files or directories and store the modification history of content.
+In addition to storing the modification history, you can also track the status and version of the content.
 - get
 ```sh
 $ git remote
