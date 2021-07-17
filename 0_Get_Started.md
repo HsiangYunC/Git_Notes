@@ -3,6 +3,8 @@
 ```sh
 $ git --version
 ```  
+<br>
+
 ### 2. initial setting  
 - user 
 ```sh
@@ -18,15 +20,20 @@ $ git config --global color.ui auto
 ```sh
 $ git config --global alias.co checkout
 ```
+<br>
   
 ### 3. initial git 
 ```sh
 $ git init
 ```
+<br>
+
 ### 4. get git status
 ```sh
 $ git status
 ```
+<br>
+
 ### 5. add tracking files
 - add file(s)
 ```sh
@@ -37,11 +44,15 @@ $ git add <file1> <file2> ...
 ```sh
 $ git add .
 ```
+<br>
+
 ### 6. commit
 ```sh
 $ git commit -m "<commit message>"
 ```
-### 6. get git log
+<br>
+
+### 7. get git log
 ```sh
 $ git log
 ```
@@ -51,10 +62,3 @@ $ gitk
 $ git log --graph
 $ git log --graph --oneline
 ```
-
-
-
-
-
-
-
