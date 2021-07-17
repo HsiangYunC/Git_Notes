@@ -48,6 +48,8 @@ $ git log
 - graphic show
 ```sh
 $ gitk
+$ git log --graph
+$ git log --graph --oneline
 ```
 
 
