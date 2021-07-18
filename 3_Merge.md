@@ -4,9 +4,9 @@ Combine multiple history records.
 ### 1. Merge
 The history of the modified content will **remain as it is**, but the combined history will become more **complicated**.
 
->#### case A : fast-forward
+- fast-forward
 >```
->A - B (master)
+> A - B (master)
 >     |
 >     --- X - Y (bugfix)
 >```
@@ -18,7 +18,7 @@ The history of the modified content will **remain as it is**, but the combined h
 >     --- X - Y (bugfix, master)
 >```
 
->#### case B : non fast-forward
+- non fast-forward
 >```
 > A - B - C - D (master)
 >     | 
@@ -36,14 +36,21 @@ The history of the modified content will **remain as it is**, but the combined h
 The history record of the modified content will be **followed by the branch** to be merged.  
 The merged history record will be **clearer and simpler**, but **conflicts** are more likely to occur than using merge.
 
->#### case A : rebase merge
+- rebase
 >```
 > A - B - C - D (master)
 >     | 
 >     --- X - Y (bugfix)
 >```
 >
->after merge (the `bugfix` will be added to the back of the `master`) :
+>modify the conflict part (if conflict occurred):
+>```
+> A - B - C - D (master) - X' - Y' (bugfix)
+>     |                   /   /
+>     ------------------ X - Y
+>```
+>after merge (the HEAD of `master` will be moved to the HEAD of `bugfix`) :
+>
 >```
 > A - B - C - D - X' - Y' (bugfix, master)
 >```
