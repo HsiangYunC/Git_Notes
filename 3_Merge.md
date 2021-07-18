@@ -10,27 +10,37 @@ The history of the modified content will **remain as it is**, but the combined h
 >     |
 >     --- X - Y (bugfix)
 >```
->
->after merge (move the `bugfix` to the `master` branch) :
+>git merge :
+>```
+>$ git checkout master
+>$ git merge bugfix
+>```
+>move the `bugfix` to the `master` branch
 >```
 > A - B
 >     |
 >     --- X - Y (bugfix, master)
 >```
-
+>
 - non fast-forward
 >```
 > A - B - C - D (master)
 >     | 
 >     --- X - Y (bugfix)
+>```  
+>git merge :  
+>- (`--no-ff` causes the merge to always create a new commit object)
 >```
->
->after merge (the `master` will be updated to the newly created merge commit) :
+>$ git checkout master
+>$ git merge --no-ff bugfix
 >```
-> A - B - C - D - E (master)
->     |           | 
->     --- X - Y --- (bugfix)
+>the `master` will be updated to the newly created merge commit
 >```
+> A - B - C - D ---------- E (master)
+>     |                    | 
+>     --- X - Y (bugfix) ---
+>```
+<br>
 
 ### 2. Rebase
 The history record of the modified content will be **followed by the branch** to be merged.  
@@ -42,14 +52,18 @@ The merged history record will be **clearer and simpler**, but **conflicts** are
 >     | 
 >     --- X - Y (bugfix)
 >```
->
->modify the conflict part (if conflict occurred):
+>git rebase :
+>```
+>$ git checkout bugfix
+>$ git rebase master
+>```
+>modify the conflict part (if conflict occurred) :
 >```
 > A - B - C - D (master) - X' - Y' (bugfix)
 >     |                   /   /
 >     ------------------ X - Y
 >```
->after merge (the HEAD of `master` will be moved to the HEAD of `bugfix`) :
+>the HEAD of `master` will be moved to the HEAD of `bugfix`
 >
 >```
 > A - B - C - D - X' - Y' (bugfix, master)
