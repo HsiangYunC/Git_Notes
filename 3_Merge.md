@@ -11,7 +11,7 @@ The history of the modified content will **remain as it is**, but the combined h
 >     --- X - Y (bugfix)
 >```
 >git merge :
->```
+>```sh
 >$ git checkout master
 >$ git merge bugfix
 >```
@@ -30,7 +30,7 @@ The history of the modified content will **remain as it is**, but the combined h
 >```  
 >git merge :  
 >- (`--no-ff` causes the merge to always create a new commit object)
->```
+>```sh
 >$ git checkout master
 >$ git merge --no-ff bugfix
 >```
@@ -53,15 +53,24 @@ The merged history record will be **clearer and simpler**, but **conflicts** are
 >     --- X - Y (bugfix)
 >```
 >git rebase :
->```
+>```sh
 >$ git checkout bugfix
 >$ git rebase master
->```
->modify the conflict part (if conflict occurred) :
+>``` 
+>modify the conflict part (if conflict occurred)
 >```
 > A - B - C - D (master) - X' - Y' (bugfix)
 >     |                   /   /
 >     ------------------ X - Y
+>```
+>the `bugfix` will be added behind the `master` 
+>```
+> A - B - C - D (master) - X' - Y' (bugfix)
+>```
+- fast-forwared to `master`
+>```
+>$ git checkout master
+>$ git merge bugfix
 >```
 >the HEAD of `master` will be moved to the HEAD of `bugfix`
 >
