@@ -21,6 +21,11 @@ $ git branch <branch_name>
 ```sh
 $ git checkout <branch>
 ```
+- Track remote branch
+```sh
+$ git checkout --track -b <local_branch_name> <remote_branch>
+$ git checkout --track -b develop origin/develop
+```
 <br>
 
 ### 2. Head  
@@ -35,20 +40,3 @@ Stash is a place to temporarily store modified content.
 >- If there are the same files in the branch after switching, and there are any changes, the checkout will fail. At this time, you must submit the modified content first, or put the modified content in the stash for temporary storage before checkout.
 
 You can take out the temporarily stored changes afterwards and apply them to the original branch or other branches.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
