@@ -68,7 +68,7 @@ The merged history record will be **clearer and simpler**, but **conflicts** are
 > A - B - C - D (master) - X' - Y' (bugfix)
 >```
 - fast-forwared to `master`
->```
+>```sh
 >$ git checkout master
 >$ git merge bugfix
 >```
@@ -77,3 +77,24 @@ The merged history record will be **clearer and simpler**, but **conflicts** are
 >```
 > A - B - C - D - X' - Y' (bugfix, master)
 >```
+<br>
+
+### 3. Reset merge
+```sh
+$ git reset --hard HEAD~
+```
+<br>
+
+### 4. Rebase conflict commands
+- When you have resolved this problem
+```sh
+$ git rebase --continue
+```
+- If you would prefer to skip this patch
+```sh
+$ git rebase --skip
+```
+- To check out the original branch and stop rebasing
+```sh
+$ git rebase --abort
+```
