@@ -13,6 +13,11 @@ Support multiple version control at the same time.
 The Topic branch is established from the stable Integration branch.  
 After the task is completed, the Topic branch must be merged into the Integration branch.          
   
+- Show branch list
+```sh
+$ git branch
+$ git branch -vv
+```
 - Add branch
 ```sh
 $ git branch <branch_name>
@@ -21,10 +26,13 @@ $ git branch <branch_name>
 ```sh
 $ git checkout <branch>
 ```
+- Add and switch branch
+```sh
+$ git branch -b <branch_name>
+```
 - Track remote branch
 ```sh
 $ git checkout --track -b <local_branch_name> <remote_branch>
-$ git checkout --track -b develop origin/develop
 ```
 <br>
 
