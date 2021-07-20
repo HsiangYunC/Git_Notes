@@ -22,6 +22,10 @@ $ git branch -vv
 ```sh
 $ git branch <branch_name>
 ```
+- Delete branch
+```sh
+$ git branch -d <branch_name>
+```
 - Switch branch
 ```sh
 $ git checkout <branch>
