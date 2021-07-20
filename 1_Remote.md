@@ -40,7 +40,16 @@ $ git push -u origin master
 <br>
 
 ### 4. Pull
-Download the modification history from the remote repository and synchronize it to local repository.  
+Download the modification history from the remote repository and synchronize it to local repository. 
+- `pull` is equal to `fetch + merge`
 ```sh
 $ git pull <repository> <branch>
+```
+<br>
+
+### 5. Fetch
+Get the latest history record of the remote.  
+Just want to confirm the contents of the remote, not really want to merge.  
+```sh
+$ git fetch <repository> <branch>
 ```
