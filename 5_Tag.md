@@ -8,7 +8,7 @@ Usually used to mark the name/number of the released version (eg: v1.0).
 >   - tagger name
 
 >- **Annotated Tags**  
->Stored as full objects in the Git database
+>Stored as full objects in the Git database.
 >   - tagger name
 >   - email
 >   - date
@@ -16,3 +16,4 @@ Usually used to mark the name/number of the released version (eg: v1.0).
 >   - can be signed and verified with GNU Privacy Guard (GPG)
 
 ### Annotated Tags
+### Lightweight Tags
