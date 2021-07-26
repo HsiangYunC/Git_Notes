@@ -44,6 +44,25 @@ A - B - C - D - Y'
 (Y : topic1)
 ```
 - Mainly used occasions :
-  - Restore the state of modified index (`mixed`).
-  - Completely cancel the latest commit (`hard`).
-  - Only cancel commit (`soft`).
+  - Move the commit from the wrong branch to the right place.
+  - Add commit from other branches to current branch.
+<br>
+
+### 5. Rewrite commit history
+Rewrite, replace, delete, and merge history.
+`rebase -i`
+```
+A - B - C - D
+```
+- Rewrite
+```
+A - X - C' - D'
+```
+- merge
+```
+A - (B+C) - D
+```
+- Mainly used occasions :
+  - Before push, re-enter the correct commit.
+  - Combine similar contents into a clear commit.
+  - Add files missed in the latest commit.
