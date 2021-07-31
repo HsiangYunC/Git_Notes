@@ -49,16 +49,16 @@ A - B - C - D - Y'
 <br>
 
 ### 5. Rewrite commit history
-Rewrite, replace, delete, and merge history.
+Rewrite, replace, delete, and merge history.  
 `rebase -i`
 ```
 A - B - C - D
 ```
-- Rewrite
+- rewrite :
 ```
 A - X - C' - D'
 ```
-- merge
+- merge :
 ```
 A - (B+C) - D
 ```
@@ -66,3 +66,18 @@ A - (B+C) - D
   - Before push, re-enter the correct commit.
   - Combine similar contents into a clear commit.
   - Add files missed in the latest commit.
+<br>
+
+### 6. Merge commits from other branch  
+`--squash`
+```
+A - B - C - D
+    |
+    --- X - Y
+```
+- squash : 
+```
+A - B - C - D - (X+Y)
+```
+- Mainly used occasions :
+  - Combine the commits of the topics branch, and then merge into the current branch.
