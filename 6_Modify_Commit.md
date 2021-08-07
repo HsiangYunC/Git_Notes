@@ -4,7 +4,10 @@
 `--amend`
 - Mainly used occasions :
   - Add files that were missed in the most recent commit.
-  - Modify the content or comments of the most recent commit.
+  - Modify the content or comments of the most recent commit.  
+```sh
+$ git commit --amend 
+```
 <br>
 
 ### 2. Cancel past commit
@@ -16,6 +19,9 @@ A - B - C - B'
 ```
 - Mainly used occasions :
   - Safely cancel commit posted in the past.
+```sh
+$ git revert HEAD
+```
 <br>
 
 ### 3. Discard commit
@@ -32,6 +38,13 @@ A - B - C - B'
   - Restore the state of modified index (`mixed`).
   - Completely cancel the latest commit (`hard`).
   - Only cancel commit (`soft`).
+```sh
+$ git reset HEAD~
+$ git reset HEAD~~
+$ git reset HEAD~2
+$ git reset --hard HEAD~
+$ git reset --hard <ref>
+```
 <br>
 
 ### 4. Pick commit
@@ -46,6 +59,12 @@ A - B - C - D - Y'
 - Mainly used occasions :
   - Move the commit from the wrong branch to the right place.
   - Add commit from other branches to current branch.
+
+- take out the commit of `<SHA>` and add to `<branch>`
+```sh
+$ git checkout <branch>
+$ git cherry-pick <SHA>
+```
 <br>
 
 ### 5. Rewrite commit history
