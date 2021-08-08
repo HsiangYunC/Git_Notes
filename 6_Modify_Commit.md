@@ -85,6 +85,18 @@ A - (B+C) - D
   - Before push, re-enter the correct commit.
   - Combine similar contents into a clear commit.
   - Add files missed in the latest commit.
+```sh
+$ git rebase -i HEAD~~
+(chage second pick to squash)
+```
+- edit commit
+```sh
+$ git rebase -i HEAD~~
+(chage pick to edit)
+$ git add <file>
+$ git commit --amend
+$ git rebase --continue
+```
 <br>
 
 ### 6. Merge commits from other branch  
@@ -100,3 +112,6 @@ A - B - C - D - (X+Y)
 ```
 - Mainly used occasions :
   - Combine the commits of the topics branch, and then merge into the current branch.
+```sh
+$ git merge --squash <branch>
+```
